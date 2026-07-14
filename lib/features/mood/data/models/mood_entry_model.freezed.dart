@@ -1,0 +1,313 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
+
+part of 'mood_entry_model.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using MyClass._(). This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the Freezed documentation here for more informations: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+
+MoodEntryModel _$MoodEntryModelFromJson(Map<String, dynamic> json) {
+  return _MoodEntryModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MoodEntryModel {
+  String get id => throw _privateConstructorUsedError;
+  String get userId => throw _privateConstructorUsedError;
+  @MoodTypeConverter()
+  MoodType get mood => throw _privateConstructorUsedError;
+  DateTime get createdAt => throw _privateConstructorUsedError;
+  double get energyLevel => throw _privateConstructorUsedError;
+  double get stressLevel => throw _privateConstructorUsedError;
+  double get sleepHours => throw _privateConstructorUsedError;
+  @JsonKey(readValue: _readNotes)
+  String? get notes => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $MoodEntryModelCopyWith<MoodEntryModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MoodEntryModelCopyWith<$Res> {
+  factory $MoodEntryModelCopyWith(
+          MoodEntryModel value, $Res Function(MoodEntryModel) then) =
+      _$MoodEntryModelCopyWithImpl<$Res, MoodEntryModel>;
+  @useResult
+  $Res call(
+      {String id,
+      String userId,
+      @MoodTypeConverter() MoodType mood,
+      DateTime createdAt,
+      double energyLevel,
+      double stressLevel,
+      double sleepHours,
+      @JsonKey(readValue: _readNotes) String? notes});
+}
+
+/// @nodoc
+class _$MoodEntryModelCopyWithImpl<$Res, $Val extends MoodEntryModel>
+    implements $MoodEntryModelCopyWith<$Res> {
+  _$MoodEntryModelCopyWithImpl(this._value, this._then);
+
+  final $Val _value;
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? userId = null,
+    Object? mood = null,
+    Object? createdAt = null,
+    Object? energyLevel = null,
+    Object? stressLevel = null,
+    Object? sleepHours = null,
+    Object? notes = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      userId: null == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String,
+      mood: null == mood
+          ? _value.mood
+          : mood // ignore: cast_nullable_to_non_nullable
+              as MoodType,
+      createdAt: null == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      energyLevel: null == energyLevel
+          ? _value.energyLevel
+          : energyLevel // ignore: cast_nullable_to_non_nullable
+              as double,
+      stressLevel: null == stressLevel
+          ? _value.stressLevel
+          : stressLevel // ignore: cast_nullable_to_non_nullable
+              as double,
+      sleepHours: null == sleepHours
+          ? _value.sleepHours
+          : sleepHours // ignore: cast_nullable_to_non_nullable
+              as double,
+      notes: freezed == notes
+          ? _value.notes
+          : notes // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$MoodEntryModelImplCopyWith<$Res>
+    implements $MoodEntryModelCopyWith<$Res> {
+  factory _$$MoodEntryModelImplCopyWith(_$MoodEntryModelImpl value,
+          $Res Function(_$MoodEntryModelImpl) then) =
+      __$$MoodEntryModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String id,
+      String userId,
+      @MoodTypeConverter() MoodType mood,
+      DateTime createdAt,
+      double energyLevel,
+      double stressLevel,
+      double sleepHours,
+      @JsonKey(readValue: _readNotes) String? notes});
+}
+
+/// @nodoc
+class __$$MoodEntryModelImplCopyWithImpl<$Res>
+    extends _$MoodEntryModelCopyWithImpl<$Res, _$MoodEntryModelImpl>
+    implements _$$MoodEntryModelImplCopyWith<$Res> {
+  __$$MoodEntryModelImplCopyWithImpl(
+      _$MoodEntryModelImpl _value, $Res Function(_$MoodEntryModelImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? userId = null,
+    Object? mood = null,
+    Object? createdAt = null,
+    Object? energyLevel = null,
+    Object? stressLevel = null,
+    Object? sleepHours = null,
+    Object? notes = freezed,
+  }) {
+    return _then(_$MoodEntryModelImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      userId: null == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String,
+      mood: null == mood
+          ? _value.mood
+          : mood // ignore: cast_nullable_to_non_nullable
+              as MoodType,
+      createdAt: null == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      energyLevel: null == energyLevel
+          ? _value.energyLevel
+          : energyLevel // ignore: cast_nullable_to_non_nullable
+              as double,
+      stressLevel: null == stressLevel
+          ? _value.stressLevel
+          : stressLevel // ignore: cast_nullable_to_non_nullable
+              as double,
+      sleepHours: null == sleepHours
+          ? _value.sleepHours
+          : sleepHours // ignore: cast_nullable_to_non_nullable
+              as double,
+      notes: freezed == notes
+          ? _value.notes
+          : notes // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$MoodEntryModelImpl extends MoodEntryModel {
+  const _$MoodEntryModelImpl(
+      {required this.id,
+      required this.userId,
+      @MoodTypeConverter() required this.mood,
+      required this.createdAt,
+      this.energyLevel = 5.0,
+      this.stressLevel = 5.0,
+      this.sleepHours = 7.0,
+      @JsonKey(readValue: _readNotes) this.notes})
+      : super._();
+
+  factory _$MoodEntryModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MoodEntryModelImplFromJson(json);
+
+  @override
+  final String id;
+  @override
+  final String userId;
+  @override
+  @MoodTypeConverter()
+  final MoodType mood;
+  @override
+  final DateTime createdAt;
+  @override
+  @JsonKey()
+  final double energyLevel;
+  @override
+  @JsonKey()
+  final double stressLevel;
+  @override
+  @JsonKey()
+  final double sleepHours;
+  @override
+  @JsonKey(readValue: _readNotes)
+  final String? notes;
+
+  @override
+  String toString() {
+    return 'MoodEntryModel(id: $id, userId: $userId, mood: $mood, createdAt: $createdAt, energyLevel: $energyLevel, stressLevel: $stressLevel, sleepHours: $sleepHours, notes: $notes)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MoodEntryModelImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.userId, userId) || other.userId == userId) &&
+            (identical(other.mood, mood) || other.mood == mood) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.energyLevel, energyLevel) ||
+                other.energyLevel == energyLevel) &&
+            (identical(other.stressLevel, stressLevel) ||
+                other.stressLevel == stressLevel) &&
+            (identical(other.sleepHours, sleepHours) ||
+                other.sleepHours == sleepHours) &&
+            (identical(other.notes, notes) || other.notes == notes));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, userId, mood, createdAt,
+      energyLevel, stressLevel, sleepHours, notes);
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MoodEntryModelImplCopyWith<_$MoodEntryModelImpl> get copyWith =>
+      __$$MoodEntryModelImplCopyWithImpl<_$MoodEntryModelImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$MoodEntryModelImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MoodEntryModel extends MoodEntryModel {
+  const factory _MoodEntryModel(
+      {required final String id,
+      required final String userId,
+      @MoodTypeConverter() required final MoodType mood,
+      required final DateTime createdAt,
+      final double energyLevel,
+      final double stressLevel,
+      final double sleepHours,
+      @JsonKey(readValue: _readNotes) final String? notes}) = _$MoodEntryModelImpl;
+  const _MoodEntryModel._() : super._();
+
+  factory _MoodEntryModel.fromJson(Map<String, dynamic> json) =
+      _$MoodEntryModelImpl.fromJson;
+
+  @override
+  String get id;
+  @override
+  String get userId;
+  @override
+  @MoodTypeConverter()
+  MoodType get mood;
+  @override
+  DateTime get createdAt;
+  @override
+  double get energyLevel;
+  @override
+  double get stressLevel;
+  @override
+  double get sleepHours;
+  @override
+  @JsonKey(readValue: _readNotes)
+  String? get notes;
+
+  @override
+  Map<String, dynamic> toJson();
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$MoodEntryModelImplCopyWith<_$MoodEntryModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

@@ -1,0 +1,50 @@
+# MindSafe — Secure Mental Health & Mood Tracking
+#
+# This file intentionally keeps platform folders generated via `flutter create`.
+# See README.md for setup instructions.
+
+*.iml
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+*.ipr
+*.iws
+.idea/
+
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+app.*.symbols
+app.*.map.json
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Generated mocks only — Freezed outputs are committed for offline builds
+*.mocks.dart
+
+# Secrets
+.env
+*.jks
+key.properties
