@@ -1,0 +1,17 @@
+﻿Analyzing lib...
+
+warning - core\widgets\mood_emoji.dart:3:8 - Unused import: 'package:mindsafe/core/constants/app_colors.dart'. Try removing the import directive. - unused_import
+warning - features\analytics\domain\entities\mood_trend_point.dart:1:8 - Unused import: 'package:mindsafe/features/mood/domain/entities/mood_type.dart'. Try removing the import directive. - unused_import
+warning - features\mood\presentation\providers\mood_provider.dart:73:24 - The '!' will have no effect because the receiver can't be null. Try removing the '!' operator. - unnecessary_non_null_assertion
+   info - core\services\storage_service.dart:2:8 - The import of 'dart:typed_data' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/foundation.dart'. Try removing the import directive. - unnecessary_import
+   info - features\authentication\presentation\screens\welcome_screen.dart:104:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - features\authentication\presentation\screens\welcome_screen.dart:116:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - features\settings\presentation\screens\pin_lock_screen.dart:154:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - features\settings\presentation\screens\settings_screen.dart:58:15 - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor or activeTrackColor instead. This feature was deprecated after v3.31.0-2.0.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - features\settings\presentation\screens\settings_screen.dart:71:15 - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor or activeTrackColor instead. This feature was deprecated after v3.31.0-2.0.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - features\settings\presentation\screens\settings_screen.dart:84:15 - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor or activeTrackColor instead. This feature was deprecated after v3.31.0-2.0.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - features\settings\presentation\screens\settings_screen.dart:129:15 - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor or activeTrackColor instead. This feature was deprecated after v3.31.0-2.0.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - features\settings\presentation\screens\settings_screen.dart:152:15 - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor or activeTrackColor instead. This feature was deprecated after v3.31.0-2.0.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - features\settings\presentation\screens\settings_screen.dart:167:15 - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor or activeTrackColor instead. This feature was deprecated after v3.31.0-2.0.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+
+13 issues found.

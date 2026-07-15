@@ -1,0 +1,12 @@
+﻿Launching lib\main.dart on Chrome in debug mode...
+Waiting for connection from debug service on Chrome...          
+flutter : Flutter failed to delete a directory at "build\flutter_assets". The flutter tool cannot access the file or 
+directory.
+Au caractère C:\Users\USER£\AppData\Local\Temp\ps-script-5d0a1014-4e5e-4706-9110-df541cb1ce9f.ps1:105 : 113
++ ... vices 2>&1; flutter run -d chrome --web-browser-flag "--disable-web-s ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Flutter failed ...e or directory.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Please ensure that the SDK and/or project is installed in a location that has read/write permissions for the current 
+user.

@@ -108,7 +108,7 @@ class _MoodHistoryTile extends ConsumerWidget {
                     ),
                     const Spacer(),
                     Text(
-                      entry.date.formattedShort,
+                      entry.createdAt.formattedShort,
                       style: GoogleFonts.dmSans(
                         fontSize: 13,
                         color: colorScheme.onSurface.withValues(alpha: 0.6),

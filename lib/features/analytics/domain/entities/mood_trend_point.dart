@@ -1,5 +1,3 @@
-import 'package:mindsafe/features/mood/domain/entities/mood_type.dart';
-
 class MoodTrendPoint {
   const MoodTrendPoint({
     required this.date,

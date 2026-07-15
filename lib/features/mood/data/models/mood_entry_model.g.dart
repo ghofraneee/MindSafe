@@ -1,4 +1,3 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'mood_entry_model.dart';
@@ -19,7 +18,8 @@ _$MoodEntryModelImpl _$$MoodEntryModelImplFromJson(Map<String, dynamic> json) =>
       notes: _readNotes(json, 'notes') as String?,
     );
 
-Map<String, dynamic> _$$MoodEntryModelImplToJson(_$MoodEntryModelImpl instance) =>
+Map<String, dynamic> _$$MoodEntryModelImplToJson(
+        _$MoodEntryModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'userId': instance.userId,

@@ -1,0 +1,22 @@
+﻿Compiling lib\main.dart for the Web...                          
+flutter : Wasm dry run findings:
+Au caractère C:\Users\USER£\AppData\Local\Temp\ps-script-a9a6d4ea-0f41-45c2-ab41-d599045e17ef.ps1:105 : 224
++ ... nalyze_lib3.txt; flutter build web --no-tree-shake-icons 2>&1 | Out-F ...
++                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Wasm dry run findings::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Found incompatibilities with WebAssembly.
+
+package:flutter_secure_storage_web/flutter_secure_storage_web.dart 5:1 - dart:html unsupported (0)
+package:flutter_secure_storage_web/flutter_secure_storage_web.dart 6:1 - dart:js_util unsupported (15)
+package:flutter_secure_storage_web/src/subtle.dart 21:1 - dart:html unsupported (0)
+package:flutter_secure_storage_web/src/subtle.dart 22:1 - dart:js_util unsupported (15)
+package:flutter_secure_storage_web/src/subtle.dart 26:1 - package:js/js.dart unsupported (14)
+
+Consider addressing these issues to enable wasm builds. See docs for more info: 
+https://docs.flutter.dev/platform-integration/web/wasm
+
+Use --no-wasm-dry-run to disable these warnings.
+Compiling lib\main.dart for the Web...                            270.0s
+ΓêÜ Built build\web

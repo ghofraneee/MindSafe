@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// dart format off
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'mood_entry.dart';
 
@@ -11,7 +12,7 @@ part of 'mood_entry.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using MyClass._(). This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the Freezed documentation here for more informations: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MoodEntry _$MoodEntryFromJson(Map<String, dynamic> json) {
   return _MoodEntry.fromJson(json);
@@ -30,8 +31,7 @@ mixin _$MoodEntry {
   String? get notes => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MoodEntryCopyWith<MoodEntry> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,7 +57,9 @@ class _$MoodEntryCopyWithImpl<$Res, $Val extends MoodEntry>
     implements $MoodEntryCopyWith<$Res> {
   _$MoodEntryCopyWithImpl(this._value, this._then);
 
+  // ignore: unused_field
   final $Val _value;
+  // ignore: unused_field
   final $Res Function($Val) _then;
 
   @pragma('vm:prefer-inline')
@@ -246,12 +248,12 @@ class _$MoodEntryImpl implements _MoodEntry {
             (identical(other.notes, notes) || other.notes == notes));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, userId, mood, createdAt,
       energyLevel, stressLevel, sleepHours, notes);
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MoodEntryImplCopyWith<_$MoodEntryImpl> get copyWith =>
@@ -296,11 +298,8 @@ abstract class _MoodEntry implements MoodEntry {
   double get sleepHours;
   @override
   String? get notes;
-
   @override
-  Map<String, dynamic> toJson();
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MoodEntryImplCopyWith<_$MoodEntryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

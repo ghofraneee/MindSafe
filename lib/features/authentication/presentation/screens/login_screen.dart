@@ -188,7 +188,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                               ),
                             ),
                             validator: (value) =>
-                                Validators.required(value, fieldName: 'Password'),
+                                Validators.nonEmpty(value, fieldName: 'Password'),
                           ),
                           const SizedBox(height: 8),
                           Row(

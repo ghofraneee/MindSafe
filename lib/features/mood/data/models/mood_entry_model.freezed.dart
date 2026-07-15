@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// dart format off
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'mood_entry_model.dart';
 
@@ -11,7 +12,7 @@ part of 'mood_entry_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using MyClass._(). This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the Freezed documentation here for more informations: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MoodEntryModel _$MoodEntryModelFromJson(Map<String, dynamic> json) {
   return _MoodEntryModel.fromJson(json);
@@ -31,8 +32,7 @@ mixin _$MoodEntryModel {
   String? get notes => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MoodEntryModelCopyWith<MoodEntryModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,7 +59,9 @@ class _$MoodEntryModelCopyWithImpl<$Res, $Val extends MoodEntryModel>
     implements $MoodEntryModelCopyWith<$Res> {
   _$MoodEntryModelCopyWithImpl(this._value, this._then);
 
+  // ignore: unused_field
   final $Val _value;
+  // ignore: unused_field
   final $Res Function($Val) _then;
 
   @pragma('vm:prefer-inline')
@@ -189,7 +191,7 @@ class __$$MoodEntryModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MoodEntryModelImpl extends MoodEntryModel {
+class _$MoodEntryModelImpl extends _MoodEntryModel {
   const _$MoodEntryModelImpl(
       {required this.id,
       required this.userId,
@@ -250,12 +252,12 @@ class _$MoodEntryModelImpl extends MoodEntryModel {
             (identical(other.notes, notes) || other.notes == notes));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, userId, mood, createdAt,
       energyLevel, stressLevel, sleepHours, notes);
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MoodEntryModelImplCopyWith<_$MoodEntryModelImpl> get copyWith =>
@@ -272,14 +274,15 @@ class _$MoodEntryModelImpl extends MoodEntryModel {
 
 abstract class _MoodEntryModel extends MoodEntryModel {
   const factory _MoodEntryModel(
-      {required final String id,
-      required final String userId,
-      @MoodTypeConverter() required final MoodType mood,
-      required final DateTime createdAt,
-      final double energyLevel,
-      final double stressLevel,
-      final double sleepHours,
-      @JsonKey(readValue: _readNotes) final String? notes}) = _$MoodEntryModelImpl;
+          {required final String id,
+          required final String userId,
+          @MoodTypeConverter() required final MoodType mood,
+          required final DateTime createdAt,
+          final double energyLevel,
+          final double stressLevel,
+          final double sleepHours,
+          @JsonKey(readValue: _readNotes) final String? notes}) =
+      _$MoodEntryModelImpl;
   const _MoodEntryModel._() : super._();
 
   factory _MoodEntryModel.fromJson(Map<String, dynamic> json) =
@@ -303,11 +306,8 @@ abstract class _MoodEntryModel extends MoodEntryModel {
   @override
   @JsonKey(readValue: _readNotes)
   String? get notes;
-
   @override
-  Map<String, dynamic> toJson();
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MoodEntryModelImplCopyWith<_$MoodEntryModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

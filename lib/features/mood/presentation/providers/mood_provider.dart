@@ -70,7 +70,7 @@ class MoodNotifier extends StateNotifier<MoodState> {
       final existing = state.todayMood;
       final entry = MoodEntry(
         id: existing?.id ?? _uuid.v4(),
-        userId: _userId!,
+        userId: _userId,
         mood: mood,
         createdAt: existing?.createdAt ?? DateTime.now(),
         energyLevel: energyLevel,
@@ -87,6 +87,18 @@ class MoodNotifier extends StateNotifier<MoodState> {
         isSaving: false,
         errorMessage: 'Could not save mood.',
       );
+      return false;
+    }
+  }
+
+  Future<bool> deleteMood(String id) async {
+    if (_userId == null) return false;
+    try {
+      await _repository.deleteMood(id);
+      await loadMoods();
+      return true;
+    } catch (e) {
+      state = state.copyWith(errorMessage: 'Could not delete mood.');
       return false;
     }
   }
@@ -110,6 +122,9 @@ final todayMoodProvider = Provider<MoodEntry?>((ref) {
 final moodListProvider = Provider<List<MoodEntry>>((ref) {
   return ref.watch(moodNotifierProvider).moods;
 });
+
+/// Alias used by history UI — same data as [moodListProvider].
+final moodHistoryProvider = moodListProvider;
 
 final moodStreakProvider = Provider<int>((ref) {
   final moods = ref.watch(moodListProvider);

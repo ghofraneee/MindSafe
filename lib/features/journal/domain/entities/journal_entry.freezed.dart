@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// dart format off
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'journal_entry.dart';
 
@@ -11,7 +12,7 @@ part of 'journal_entry.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using MyClass._(). This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the Freezed documentation here for more informations: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$JournalEntry {
@@ -24,9 +25,7 @@ mixin _$JournalEntry {
   DateTime get updatedAt => throw _privateConstructorUsedError;
   bool get isDraft => throw _privateConstructorUsedError;
 
-  /// Create a copy of JournalEntry
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $JournalEntryCopyWith<JournalEntry> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,8 +56,6 @@ class _$JournalEntryCopyWithImpl<$Res, $Val extends JournalEntry>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of JournalEntry
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,8 +126,6 @@ class __$$JournalEntryImplCopyWithImpl<$Res>
       _$JournalEntryImpl _value, $Res Function(_$JournalEntryImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of JournalEntry
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -176,6 +171,7 @@ class __$$JournalEntryImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$JournalEntryImpl implements _JournalEntry {
   const _$JournalEntryImpl(
       {required this.id,
@@ -229,9 +225,7 @@ class _$JournalEntryImpl implements _JournalEntry {
   int get hashCode => Object.hash(runtimeType, id, title, description, moodTag,
       createdAt, updatedAt, isDraft);
 
-  /// Create a copy of JournalEntry
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$JournalEntryImplCopyWith<_$JournalEntryImpl> get copyWith =>
@@ -260,14 +254,11 @@ abstract class _JournalEntry implements JournalEntry {
   @override
   DateTime get createdAt;
   @override
-  DateTime updatedAt;
+  DateTime get updatedAt;
   @override
   bool get isDraft;
-
-  /// Create a copy of JournalEntry
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$JournalEntryImplCopyWith<_$JournalEntryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// dart format off
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'auth_state.dart';
 
@@ -11,7 +12,7 @@ part of 'auth_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using MyClass._(). This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the Freezed documentation here for more informations: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AuthState {
@@ -84,7 +85,9 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
     implements $AuthStateCopyWith<$Res> {
   _$AuthStateCopyWithImpl(this._value, this._then);
 
+  // ignore: unused_field
   final $Val _value;
+  // ignore: unused_field
   final $Res Function($Val) _then;
 }
 
@@ -105,6 +108,7 @@ class __$$AuthInitialImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$AuthInitialImpl implements AuthInitial {
   const _$AuthInitialImpl();
 
@@ -224,6 +228,7 @@ class __$$AuthLoadingImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$AuthLoadingImpl implements AuthLoading {
   const _$AuthLoadingImpl();
 
@@ -362,12 +367,13 @@ class __$$AuthAuthenticatedImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   $UserEntityCopyWith<$Res> get user {
     return $UserEntityCopyWith<$Res>(_value.user, (value) {
-      return _then(_value.copyWith(user: value) as $Val);
+      return _then(_value.copyWith(user: value));
     });
   }
 }
 
 /// @nodoc
+
 class _$AuthAuthenticatedImpl implements AuthAuthenticated {
   const _$AuthAuthenticatedImpl({required this.user});
 
@@ -390,7 +396,7 @@ class _$AuthAuthenticatedImpl implements AuthAuthenticated {
   @override
   int get hashCode => Object.hash(runtimeType, user);
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthAuthenticatedImplCopyWith<_$AuthAuthenticatedImpl> get copyWith =>
@@ -483,8 +489,7 @@ abstract class AuthAuthenticated implements AuthState {
       _$AuthAuthenticatedImpl;
 
   UserEntity get user;
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AuthAuthenticatedImplCopyWith<_$AuthAuthenticatedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -506,6 +511,7 @@ class __$$AuthUnauthenticatedImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$AuthUnauthenticatedImpl implements AuthUnauthenticated {
   const _$AuthUnauthenticatedImpl();
 
@@ -517,7 +523,8 @@ class _$AuthUnauthenticatedImpl implements AuthUnauthenticated {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$AuthUnauthenticatedImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$AuthUnauthenticatedImpl);
   }
 
   @override
@@ -610,8 +617,8 @@ abstract class AuthUnauthenticated implements AuthState {
 
 /// @nodoc
 abstract class _$$AuthErrorStateImplCopyWith<$Res> {
-  factory _$$AuthErrorStateImplCopyWith(
-          _$AuthErrorStateImpl value, $Res Function(_$AuthErrorStateImpl) then) =
+  factory _$$AuthErrorStateImplCopyWith(_$AuthErrorStateImpl value,
+          $Res Function(_$AuthErrorStateImpl) then) =
       __$$AuthErrorStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
@@ -640,6 +647,7 @@ class __$$AuthErrorStateImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$AuthErrorStateImpl implements AuthErrorState {
   const _$AuthErrorStateImpl({required this.message});
 
@@ -662,7 +670,7 @@ class _$AuthErrorStateImpl implements AuthErrorState {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthErrorStateImplCopyWith<_$AuthErrorStateImpl> get copyWith =>
@@ -755,8 +763,7 @@ abstract class AuthErrorState implements AuthState {
       _$AuthErrorStateImpl;
 
   String get message;
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AuthErrorStateImplCopyWith<_$AuthErrorStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

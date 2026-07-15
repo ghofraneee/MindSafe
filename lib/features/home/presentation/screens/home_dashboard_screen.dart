@@ -198,14 +198,15 @@ class _TodayMoodCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final mood = todayMood;
 
     return GlassCard(
       gradientBorder: true,
       padding: const EdgeInsets.all(20),
       child: Row(
         children: [
-          if (todayMood != null)
-            MoodEmoji(mood: todayMood.mood, size: 40)
+          if (mood != null)
+            MoodEmoji(mood: mood.mood, size: 40)
           else
             Container(
               width: 56,
@@ -237,20 +238,18 @@ class _TodayMoodCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  todayMood != null
-                      ? todayMood.mood.label
-                      : 'Not logged yet',
+                  mood != null ? mood.mood.label : 'Not logged yet',
                   style: GoogleFonts.fraunces(
                     fontSize: 22,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                if (todayMood != null) ...[
+                if (mood != null) ...[
                   const SizedBox(height: 4),
                   Text(
-                    'Energy ${todayMood.energyLevel.round()} · '
-                    'Stress ${todayMood.stressLevel.round()} · '
-                    '${todayMood.sleepHours.toStringAsFixed(1)}h sleep',
+                    'Energy ${mood.energyLevel.round()} · '
+                    'Stress ${mood.stressLevel.round()} · '
+                    '${mood.sleepHours.toStringAsFixed(1)}h sleep',
                     style: GoogleFonts.dmSans(
                       fontSize: 12,
                       color: Theme.of(context)
@@ -266,7 +265,7 @@ class _TodayMoodCard extends StatelessWidget {
           IconButton(
             onPressed: () => context.go('/mood'),
             icon: Icon(
-              todayMood != null ? Icons.edit_rounded : Icons.add_rounded,
+              mood != null ? Icons.edit_rounded : Icons.add_rounded,
               color: AppColors.primary,
             ),
           ),

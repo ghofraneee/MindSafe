@@ -1,0 +1,165 @@
+﻿Compiling lib\main.dart for the Web...                          
+flutter : Wasm dry run findings:
+Au caractère C:\Users\USER£\AppData\Local\Temp\ps-script-21755bc0-2846-4e05-9b50-662af599dbb6.ps1:105 : 201
++ ... tter clean 2>&1; flutter build web --no-tree-shake-icons 2>&1 | Out-F ...
++                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Wasm dry run findings::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Found incompatibilities with WebAssembly.
+
+package:flutter_secure_storage_web/flutter_secure_storage_web.dart 5:1 - dart:html unsupported (0)
+package:flutter_secure_storage_web/flutter_secure_storage_web.dart 6:1 - dart:js_util unsupported (15)
+package:flutter_secure_storage_web/src/subtle.dart 21:1 - dart:html unsupported (0)
+package:flutter_secure_storage_web/src/subtle.dart 22:1 - dart:js_util unsupported (15)
+package:flutter_secure_storage_web/src/subtle.dart 26:1 - package:js/js.dart unsupported (14)
+
+Consider addressing these issues to enable wasm builds. See docs for more info: 
+https://docs.flutter.dev/platform-integration/web/wasm
+
+Use --no-wasm-dry-run to disable these warnings.
+Target dart2js failed: ProcessException: Process exited abnormally with exit code 1:
+lib/features/journal/domain/entities/journal_entry.freezed.dart:179:7:
+Error: The non-abstract class '_$JournalEntryImpl' is missing implementations for these members:
+ - _JournalEntry.updatedAt
+class _$JournalEntryImpl implements _JournalEntry {
+      ^^^^^^^^^^^^^^^^^^
+lib/features/journal/domain/entities/journal_entry.freezed.dart:263:12:
+Info: '_JournalEntry.updatedAt' is defined here.
+  DateTime updatedAt;
+           ^^^^^^^^^
+lib/features/authentication/data/models/user_model.freezed.dart:303:45:
+Error: The constructor function type '_$UserModelImpl Function({String? avatarPath, required DateTime createdAt, 
+required String email, required String id, required String name, required String passwordHash, required String 
+passwordSalt, int streak, int wellnessScore})' isn't a subtype of '_UserModel Function({String? avatarPath, required 
+DateTime createdAt, required String email, required String id, required String name, required String passwordHash, 
+required String passwordSalt, int streak, int wellnessScore})'.
+ - '_$UserModelImpl' is from 'package:mindsafe/features/authentication/data/models/user_model.dart' 
+('lib/features/authentication/data/models/user_model.dart').
+ - 'DateTime' is from 'dart:core'.
+ - '_UserModel' is from 'package:mindsafe/features/authentication/data/models/user_model.dart' 
+('lib/features/authentication/data/models/user_model.dart').
+      required final DateTime createdAt}) = _$UserModelImpl;
+                                            ^
+lib/features/authentication/data/models/user_model.freezed.dart:307:7:
+Error: The constructor function type '_$UserModelImpl Function(Map<String, dynamic>)' isn't a subtype of '_UserModel 
+Function(Map<String, dynamic>)'.
+ - '_$UserModelImpl' is from 'package:mindsafe/features/authentication/data/models/user_model.dart' 
+('lib/features/authentication/data/models/user_model.dart').
+ - 'Map' is from 'dart:core'.
+ - '_UserModel' is from 'package:mindsafe/features/authentication/data/models/user_model.dart' 
+('lib/features/authentication/data/models/user_model.dart').
+      _$UserModelImpl.fromJson;
+      ^
+lib/features/journal/data/models/journal_entry_model.freezed.dart:257:30:
+Error: The constructor function type '_$JournalEntryModelImpl Function({required DateTime createdAt, required String 
+description, required String id, bool isDraft, String? moodTag, required String title, required DateTime updatedAt})' 
+isn't a subtype of '_JournalEntryModel Function({required DateTime createdAt, required String description, required 
+String id, bool isDraft, String? moodTag, required String title, required DateTime updatedAt})'.
+ - '_$JournalEntryModelImpl' is from 'package:mindsafe/features/journal/data/models/journal_entry_model.dart' 
+('lib/features/journal/data/models/journal_entry_model.dart').
+ - 'DateTime' is from 'dart:core'.
+ - '_JournalEntryModel' is from 'package:mindsafe/features/journal/data/models/journal_entry_model.dart' 
+('lib/features/journal/data/models/journal_entry_model.dart').
+      final bool isDraft}) = _$JournalEntryModelImpl;
+                             ^
+lib/features/journal/data/models/journal_entry_model.freezed.dart:261:7:
+Error: The constructor function type '_$JournalEntryModelImpl Function(Map<String, dynamic>)' isn't a subtype of 
+'_JournalEntryModel Function(Map<String, dynamic>)'.
+ - '_$JournalEntryModelImpl' is from 'package:mindsafe/features/journal/data/models/journal_entry_model.dart' 
+('lib/features/journal/data/models/journal_entry_model.dart').
+ - 'Map' is from 'dart:core'.
+ - '_JournalEntryModel' is from 'package:mindsafe/features/journal/data/models/journal_entry_model.dart' 
+('lib/features/journal/data/models/journal_entry_model.dart').
+      _$JournalEntryModelImpl.fromJson;
+      ^
+lib/features/mood/data/models/mood_entry_model.freezed.dart:282:63:
+Error: The constructor function type '_$MoodEntryModelImpl Function({required DateTime createdAt, double energyLevel, 
+required String id, required MoodType mood, String? notes, double sleepHours, double stressLevel, required String 
+userId})' isn't a subtype of '_MoodEntryModel Function({required DateTime createdAt, double energyLevel, required 
+String id, required MoodType mood, String? notes, double sleepHours, double stressLevel, required String userId})'.
+ - '_$MoodEntryModelImpl' is from 'package:mindsafe/features/mood/data/models/mood_entry_model.dart' 
+('lib/features/mood/data/models/mood_entry_model.dart').
+ - 'DateTime' is from 'dart:core'.
+ - 'MoodType' is from 'package:mindsafe/features/mood/domain/entities/mood_type.dart' 
+('lib/features/mood/domain/entities/mood_type.dart').
+ - '_MoodEntryModel' is from 'package:mindsafe/features/mood/data/models/mood_entry_model.dart' 
+('lib/features/mood/data/models/mood_entry_model.dart').
+      @JsonKey(readValue: _readNotes) final String? notes}) = _$MoodEntryModelImpl;
+                                                              ^
+lib/features/mood/data/models/mood_entry_model.freezed.dart:286:7:
+Error: The constructor function type '_$MoodEntryModelImpl Function(Map<String, dynamic>)' isn't a subtype of 
+'_MoodEntryModel Function(Map<String, dynamic>)'.
+ - '_$MoodEntryModelImpl' is from 'package:mindsafe/features/mood/data/models/mood_entry_model.dart' 
+('lib/features/mood/data/models/mood_entry_model.dart').
+ - 'Map' is from 'dart:core'.
+ - '_MoodEntryModel' is from 'package:mindsafe/features/mood/data/models/mood_entry_model.dart' 
+('lib/features/mood/data/models/mood_entry_model.dart').
+      _$MoodEntryModelImpl.fromJson;
+      ^
+lib/features/authentication/presentation/providers/auth_state.freezed.dart:365:52:
+Error: '$Val' isn't a type.
+      return _then(_value.copyWith(user: value) as $Val);
+                                                   ^^^^
+lib/features/journal/domain/entities/journal_entry.freezed.dart:263:12:
+Error: Field 'updatedAt' should be initialized because its type 'DateTime' doesn't allow null.
+ - 'DateTime' is from 'dart:core'.
+  DateTime updatedAt;
+           ^^^^^^^^^
+Error: Compilation failed.
+  Command: C:\src\flutter\bin\cache\dart-sdk\bin\dart.exe compile js 
+--platform-binaries=C:\src\flutter\bin\cache\flutter_web_sdk\kernel --invoker=flutter_tool -Ddart.vm.product=true 
+-DFLUTTER_VERSION=3.44.6 -DFLUTTER_CHANNEL=stable -DFLUTTER_GIT_URL=https://github.com/flutter/flutter.git 
+-DFLUTTER_FRAMEWORK_REVISION=ee80f08bbf -DFLUTTER_ENGINE_REVISION=83675ed276 -DFLUTTER_DART_VERSION=3.12.2 
+-DFLUTTER_WEB_USE_SKIA=true -DFLUTTER_WEB_USE_SKWASM=false 
+-DFLUTTER_WEB_CANVASKIT_URL=https://www.gstatic.com/flutter-canvaskit/83675ed27633283e7fc296c8bca22e841224c096/ 
+--native-null-assertions --no-source-maps -O4 --minify -o 
+C:\Users\USER┬ú\OneDrive\Bureau\MindSafe\.dart_tool\flutter_build\8e84cb2414fad7e0f4a9b1e33fa535d5\app.dill 
+--packages=C:\Users\USER┬ú\OneDrive\Bureau\MindSafe\.dart_tool\package_config.json --cfe-only 
+C:\Users\USER┬ú\OneDrive\Bureau\MindSafe\.dart_tool\flutter_build\8e84cb2414fad7e0f4a9b1e33fa535d5\main.dart
+#0      RunResult.throwException (package:flutter_tools/src/base/process.dart:153:5)
+#1      _DefaultProcessUtils.run (package:flutter_tools/src/base/process.dart:379:19)
+<asynchronous suspension>
+#2      Dart2JSTarget.build (package:flutter_tools/src/build_system/targets/web.dart:208:5)
+<asynchronous suspension>
+#3      _BuildInstance._invokeInternal (package:flutter_tools/src/build_system/build_system.dart:937:9)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:546:21)
+<asynchronous suspension>
+#5      _BuildInstance.invokeTarget (package:flutter_tools/src/build_system/build_system.dart:875:32)
+<asynchronous suspension>
+#6      Future.wait.<anonymous closure> (dart:async/future.dart:546:21)
+<asynchronous suspension>
+#7      _BuildInstance.invokeTarget (package:flutter_tools/src/build_system/build_system.dart:875:32)
+<asynchronous suspension>
+#8      FlutterBuildSystem.build (package:flutter_tools/src/build_system/build_system.dart:684:16)
+<asynchronous suspension>
+#9      WebBuilder.buildWeb (package:flutter_tools/src/web/compile.dart:107:34)
+<asynchronous suspension>
+#10     BuildWebCommand.runCommand (package:flutter_tools/src/commands/build_web.dart:293:5)
+<asynchronous suspension>
+#11     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1630:27)
+<asynchronous suspension>
+#12     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#13     CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#14     FlutterCommandRunner.runCommand.<anonymous closure> 
+(package:flutter_tools/src/runner/flutter_command_runner.dart:496:9)
+<asynchronous suspension>
+#15     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#16     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:431:5)
+<asynchronous suspension>
+#17     FlutterCommandRunner.run.<anonymous closure> 
+(package:flutter_tools/src/runner/flutter_command_runner.dart:307:33)
+<asynchronous suspension>
+#18     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:104:11)
+<asynchronous suspension>
+#19     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#20     main (package:flutter_tools/executable.dart:103:3)
+<asynchronous suspension>
+
+Compiling lib\main.dart for the Web...                            399.4s
+Error: Failed to compile application for the Web.

@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:typed_data';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter/foundation.dart';
@@ -181,6 +180,12 @@ class _InMemoryBox implements Box<dynamic> {
   String get name => 'in_memory';
 
   @override
+  String? get path => null;
+
+  @override
+  bool get lazy => false;
+
+  @override
   dynamic get(dynamic key, {dynamic defaultValue}) =>
       _data.containsKey(key) ? _data[key] : defaultValue;
 
@@ -235,6 +240,9 @@ class _InMemoryBox implements Box<dynamic> {
   dynamic getAt(int index) => values.elementAt(index);
 
   @override
+  dynamic keyAt(int index) => keys.elementAt(index);
+
+  @override
   Future<void> putAt(int index, dynamic value) async {
     final key = keys.elementAt(index);
     _data[key] = value;
@@ -256,6 +264,11 @@ class _InMemoryBox implements Box<dynamic> {
   Future<void> compact() async {}
 
   @override
+  Future<void> deleteFromDisk() async {
+    _data.clear();
+  }
+
+  @override
   Future<int> add(dynamic value) async {
     final key = _data.length;
     _data[key] = value;
@@ -275,23 +288,23 @@ class _InMemoryBox implements Box<dynamic> {
   Map<dynamic, dynamic> toMap() => Map<dynamic, dynamic>.from(_data);
 
   @override
-  LazyBox<dynamic>? get lazy => null;
-
-  @override
-  HiveObject? getObject(dynamic key) => null;
-
-  @override
-  Future<void> putObject(dynamic key, HiveObject value) async {
-    await put(key, value);
-  }
-
-  @override
-  ValueListenable<BoxEvent> listenable({List<dynamic>? keys}) {
-    throw UnimplementedError('listenable not needed in tests');
+  Iterable<dynamic> valuesBetween({dynamic startKey, dynamic endKey}) {
+    final keysList = keys.toList();
+    if (keysList.isEmpty) return const [];
+    final startIndex =
+        startKey == null ? 0 : keysList.indexOf(startKey).clamp(0, keysList.length);
+    final endIndex = endKey == null
+        ? keysList.length - 1
+        : keysList.indexOf(endKey).clamp(0, keysList.length - 1);
+    if (startIndex > endIndex) return const [];
+    return [
+      for (var i = startIndex; i <= endIndex; i++) _data[keysList[i]],
+    ];
   }
 
   @override
   Stream<BoxEvent> watch({dynamic key}) {
-    throw UnimplementedError('watch not needed in tests');
+    return const Stream<BoxEvent>.empty();
   }
 }
+

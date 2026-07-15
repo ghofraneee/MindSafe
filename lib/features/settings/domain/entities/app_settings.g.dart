@@ -1,4 +1,3 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'app_settings.dart';
@@ -11,7 +10,8 @@ _$AppSettingsImpl _$$AppSettingsImplFromJson(Map<String, dynamic> json) =>
     _$AppSettingsImpl(
       themeMode: json['themeMode'] == null
           ? ThemeMode.system
-          : const ThemeModeConverter().fromJson((json['themeMode'] as num).toInt()),
+          : const ThemeModeConverter()
+              .fromJson((json['themeMode'] as num).toInt()),
       notificationsEnabled: json['notificationsEnabled'] as bool? ?? true,
       language: json['language'] as String? ?? 'en',
       pinEnabled: json['pinEnabled'] as bool? ?? false,

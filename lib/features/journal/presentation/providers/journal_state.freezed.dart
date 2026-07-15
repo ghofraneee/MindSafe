@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// dart format off
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'journal_state.dart';
 
@@ -11,7 +12,7 @@ part of 'journal_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using MyClass._(). This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the Freezed documentation here for more informations: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$JournalState {
@@ -25,7 +26,7 @@ mixin _$JournalState {
   JournalEntry? get draft => throw _privateConstructorUsedError;
   bool get isDraftSaving => throw _privateConstructorUsedError;
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $JournalStateCopyWith<JournalState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,7 +56,9 @@ class _$JournalStateCopyWithImpl<$Res, $Val extends JournalState>
     implements $JournalStateCopyWith<$Res> {
   _$JournalStateCopyWithImpl(this._value, this._then);
 
+  // ignore: unused_field
   final $Val _value;
+  // ignore: unused_field
   final $Res Function($Val) _then;
 
   @pragma('vm:prefer-inline')
@@ -210,6 +213,7 @@ class __$$JournalStateImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$JournalStateImpl implements _JournalState {
   const _$JournalStateImpl(
       {final List<JournalEntry> entries = const [],
@@ -229,6 +233,7 @@ class _$JournalStateImpl implements _JournalState {
   @JsonKey()
   List<JournalEntry> get entries {
     if (_entries is EqualUnmodifiableListView) return _entries;
+    // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_entries);
   }
 
@@ -237,6 +242,7 @@ class _$JournalStateImpl implements _JournalState {
   @JsonKey()
   List<JournalEntry> get filteredEntries {
     if (_filteredEntries is EqualUnmodifiableListView) return _filteredEntries;
+    // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_filteredEntries);
   }
 
@@ -300,7 +306,7 @@ class _$JournalStateImpl implements _JournalState {
       draft,
       isDraftSaving);
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$JournalStateImplCopyWith<_$JournalStateImpl> get copyWith =>
@@ -337,9 +343,8 @@ abstract class _JournalState implements JournalState {
   JournalEntry? get draft;
   @override
   bool get isDraftSaving;
-
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$JournalStateImplCopyWith<_$JournalStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

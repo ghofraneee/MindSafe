@@ -7,14 +7,11 @@ import 'package:mocktail/mocktail.dart';
 import 'package:mindsafe/core/constants/app_constants.dart';
 import 'package:mindsafe/core/constants/app_strings.dart';
 import 'package:mindsafe/core/providers/core_providers.dart';
-import 'package:mindsafe/core/services/biometric_service.dart';
 import 'package:mindsafe/features/authentication/data/repositories/auth_repository_impl.dart';
 import 'package:mindsafe/features/authentication/presentation/providers/auth_provider.dart';
 import 'package:mindsafe/features/authentication/presentation/screens/login_screen.dart';
 
-import '../../mocks/mock_services.dart';
-
-class _MockBiometricService extends Mock implements BiometricService {}
+import '../mocks/mock_services.dart';
 
 void main() {
   late FakeStorageService storage;
@@ -23,7 +20,7 @@ void main() {
 
   setUp(() {
     storage = FakeStorageService();
-    biometric = _MockBiometricService();
+    biometric = MockBiometricService();
     authRepository = AuthRepositoryImpl(
       storageService: storage,
       biometricService: biometric,

@@ -8,7 +8,8 @@ part 'auth_state.freezed.dart';
 class AuthState with _$AuthState {
   const factory AuthState.initial() = AuthInitial;
   const factory AuthState.loading() = AuthLoading;
-  const factory AuthState.authenticated(UserEntity user) = AuthAuthenticated;
+  const factory AuthState.authenticated({required UserEntity user}) =
+      AuthAuthenticated;
   const factory AuthState.unauthenticated() = AuthUnauthenticated;
-  const factory AuthState.error(String message) = AuthErrorState;
+  const factory AuthState.error({required String message}) = AuthErrorState;
 }

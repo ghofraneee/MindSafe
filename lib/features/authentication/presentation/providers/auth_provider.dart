@@ -24,12 +24,12 @@ class AuthNotifier extends StateNotifier<AuthState> {
     try {
       final user = await _repository.getCurrentUser();
       if (user != null) {
-        state = AuthState.authenticated(user);
+        state = AuthState.authenticated(user: user);
       } else {
         state = const AuthState.unauthenticated();
       }
     } catch (e) {
-      state = AuthState.error(_messageFrom(e));
+      state = AuthState.error(message: _messageFrom(e));
     }
   }
 
@@ -45,10 +45,10 @@ class AuthNotifier extends StateNotifier<AuthState> {
         password: password,
         rememberMe: rememberMe,
       );
-      state = AuthState.authenticated(user);
+      state = AuthState.authenticated(user: user);
       return true;
     } catch (e) {
-      state = AuthState.error(_messageFrom(e));
+      state = AuthState.error(message: _messageFrom(e));
       return false;
     }
   }
@@ -65,10 +65,10 @@ class AuthNotifier extends StateNotifier<AuthState> {
         email: email,
         password: password,
       );
-      state = AuthState.authenticated(user);
+      state = AuthState.authenticated(user: user);
       return true;
     } catch (e) {
-      state = AuthState.error(_messageFrom(e));
+      state = AuthState.error(message: _messageFrom(e));
       return false;
     }
   }
@@ -79,7 +79,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
       await _repository.logout();
       state = const AuthState.unauthenticated();
     } catch (e) {
-      state = AuthState.error(_messageFrom(e));
+      state = AuthState.error(message: _messageFrom(e));
     }
   }
 
@@ -89,13 +89,13 @@ class AuthNotifier extends StateNotifier<AuthState> {
       await _repository.forgotPassword(email);
       final user = await _repository.getCurrentUser();
       if (user != null) {
-        state = AuthState.authenticated(user);
+        state = AuthState.authenticated(user: user);
       } else {
         state = const AuthState.unauthenticated();
       }
       return true;
     } catch (e) {
-      state = AuthState.error(_messageFrom(e));
+      state = AuthState.error(message: _messageFrom(e));
       return false;
     }
   }
@@ -105,13 +105,13 @@ class AuthNotifier extends StateNotifier<AuthState> {
     try {
       final user = await _repository.loginWithBiometric();
       if (user != null) {
-        state = AuthState.authenticated(user);
+        state = AuthState.authenticated(user: user);
         return true;
       }
       state = const AuthState.unauthenticated();
       return false;
     } catch (e) {
-      state = AuthState.error(_messageFrom(e));
+      state = AuthState.error(message: _messageFrom(e));
       return false;
     }
   }
@@ -121,7 +121,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
       await _repository.enableBiometric(enabled);
       return true;
     } catch (e) {
-      state = AuthState.error(_messageFrom(e));
+      state = AuthState.error(message: _messageFrom(e));
       return false;
     }
   }
@@ -134,7 +134,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
       await _repository.deleteAccount();
       state = const AuthState.unauthenticated();
     } catch (e) {
-      state = AuthState.error(_messageFrom(e));
+      state = AuthState.error(message: _messageFrom(e));
     }
   }
 

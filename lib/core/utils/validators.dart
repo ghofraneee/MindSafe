@@ -72,4 +72,8 @@ class Validators {
     }
     return null;
   }
+
+  /// Alias for [nonEmpty] — used by login and simple required fields.
+  static String? required(String? value, {String fieldName = 'This field'}) =>
+      nonEmpty(value, fieldName: fieldName);
 }

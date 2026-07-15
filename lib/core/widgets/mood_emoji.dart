@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:mindsafe/core/constants/app_colors.dart';
 import 'package:mindsafe/features/mood/domain/entities/mood_type.dart';
 
 /// Displays a mood emoji with a selectable scale animation.
